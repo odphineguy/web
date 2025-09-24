@@ -5,6 +5,7 @@
   ],
   "routes": [
     { "handle": "filesystem" },
+    { "src": "/app-support", "dest": "/index.html" },
     { "src": "/terms", "dest": "/index.html" },
     { "src": "/privacy", "dest": "/index.html" },
     { "src": "/gdpr", "dest": "/index.html" },
@@ -12,7 +13,6 @@
     { "src": "/contact-us", "dest": "/index.html" },
     { "src": "/about-us", "dest": "/index.html" },
     { "src": "/our-mission", "dest": "/index.html" },
-    { "src": "/app-support", "dest": "/index.html" },
     { 
       "src": "^(?!/api).*$",
       "dest": "/index.html",
