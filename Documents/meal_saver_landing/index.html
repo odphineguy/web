@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Meal Saver — Stop Wasting $1,500/Year | AI Food Management</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#000000" />
+  <meta name="description" content="Cut food waste and save up to $1,500 per year with Meal Saver. AI-powered barcode scanning, smart reminders, and family sync to keep your kitchen organized." />
+  <link rel="icon" href="/favicon.ico" />
+  <link rel="manifest" href="/manifest.json" />
+  <link rel="canonical" href="https://mealsaver.app/" />
+  <meta name="robots" content="index,follow" />
+  <meta property="og:title" content="Meal Saver — Stop Wasting $1,500/Year" />
+  <meta property="og:description" content="AI-powered food management that helps families cut food waste in half. Save money, reduce stress, and keep your kitchen organized." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://mealsaver.app/" />
+  <meta property="og:image" content="https://mealsaver.app/assets/images/og-image.png" />
+  <meta property="og:image:alt" content="Meal Saver app preview" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Meal Saver — Stop Wasting $1,500/Year" />
+  <meta name="twitter:description" content="Cut food waste and save up to $1,500/year with AI-powered food management." />
+  <meta name="twitter:image" content="https://mealsaver.app/assets/images/og-image.png" />
+  <script type="module">
+    const GA_ID = import.meta.env.VITE_GA_MEASUREMENT_ID;
+    const META_PIXEL_ID = import.meta.env.VITE_META_PIXEL_ID;
+
+    // Google Analytics 4
+    if (GA_ID) {
+      // gtag loader
+      const s = document.createElement('script');
+      s.async = true;
+      s.src = `https://www.googletagmanager.com/gtag/js?id=${GA_ID}`;
+      document.head.appendChild(s);
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){window.dataLayer.push(arguments);} // eslint-disable-line
+      window.gtag = gtag;
+      gtag('js', new Date());
+      gtag('config', GA_ID, { send_page_view: true });
+    }
+
+    // Meta Pixel
+    if (META_PIXEL_ID) {
+      !(function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod? n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)})(window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
+      window.fbq('init', META_PIXEL_ID);
+      window.fbq('track', 'PageView');
+    }
+  </script>
+<script type="module" src="https://static.rocket.new/rocket-web.js?_cfg=https%3A%2F%2Fmealsaver2736back.builtwithrocket.new&_be=https%3A%2F%2Fapplication.rocket.new&_v=0.1.8"></script>
+</head>
+
+<body>
+  <noscript>You need to enable JavaScript to run this app.</noscript>
+  <div class="dhiwise-code" id="root"></div>
+  <script type="module" src="/src/index.jsx"></script>
+</body>
+
+</html>
