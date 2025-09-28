@@ -145,12 +145,12 @@ export default function Services() {
                   <span>High-resolution downloads</span>
                 </div>
               </div>
-              <Button size="lg" className="text-lg px-8" asChild>
-                <Link href="/logo-maker" className="flex items-center">
+              <Link href="/logo-maker">
+                <Button size="lg" className="text-lg px-8 flex items-center">
                   Try Logo Maker Now
                   <ArrowRight className="ml-2 h-5 w-5" />
-                </Link>
-              </Button>
+                </Button>
+              </Link>
             </div>
             <div className="relative">
               <div className="bg-white dark:bg-gray-900 rounded-lg shadow-2xl p-6 border">
