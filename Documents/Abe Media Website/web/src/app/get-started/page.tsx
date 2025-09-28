@@ -1,6 +1,6 @@
 "use client";
 
-import { Metadata } from "next";
+// import { Metadata } from "next";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -74,7 +74,7 @@ export default function GetStarted() {
             Get <span className="text-primary">Started</span>
           </h1>
           <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Ready to bring your digital vision to life? Let's start your project today.
+            Ready to bring your digital vision to life? Let&apos;s start your project today.
           </p>
         </div>
       </section>
@@ -228,7 +228,7 @@ export default function GetStarted() {
               Why Choose Us?
             </h2>
             <p className="text-xl text-muted-foreground">
-              We're committed to delivering exceptional results for every project.
+              We&apos;re committed to delivering exceptional results for every project.
             </p>
           </div>
           
@@ -252,7 +252,7 @@ export default function GetStarted() {
             Ready to Get Started?
           </h2>
           <p className="text-xl mb-8 opacity-90">
-            Let's discuss your project and create something amazing together.
+            Let&apos;s discuss your project and create something amazing together.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" variant="secondary" className="text-lg px-8">
