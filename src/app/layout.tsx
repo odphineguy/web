@@ -69,7 +69,7 @@ export default function RootLayout({
               <div className="flex justify-center sm:justify-start">
                 <Link href="/" aria-label="Abe Media" className="inline-flex">
                   <Image src="/images/portfolio/abemedia.black.svg" alt="Abe Media" width={140} height={28} className="block dark:hidden" />
-                  <Image src="/images/portfolio/abemedia.white.svg?v=2" alt="Abe Media" width={140} height={28} className="hidden dark:block" />
+                  <Image src="/images/portfolio/abemedia.white.svg" alt="Abe Media" width={140} height={28} className="hidden dark:block" />
                 </Link>
               </div>
               <div className="text-center">

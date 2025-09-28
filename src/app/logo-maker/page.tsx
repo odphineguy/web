@@ -76,7 +76,7 @@ export default function LogoMaker() {
   return (
     <div className="min-h-screen bg-background">
       {/* Hero Section */}
-      <section className="py-20 px-6 bg-neutral-100 dark:bg-neutral-900">
+      <section className="py-20 px-6 bg-background">
         <div className="max-w-6xl mx-auto text-center">
           <h1 className="text-4xl md:text-6xl font-bold mb-6">
             Logo Maker for <span className="text-primary">Cool Brands</span>
@@ -87,8 +87,8 @@ export default function LogoMaker() {
           </p>
           
           {/* Logo Preview Demo */}
-          <div className="bg-white dark:bg-gray-900 rounded-2xl shadow-2xl p-8 mb-12 max-w-2xl mx-auto">
-            <div className="bg-gray-100 dark:bg-gray-800 rounded-lg p-6 mb-6">
+          <div className="bg-white dark:bg-neutral-900 rounded-2xl shadow-2xl p-8 mb-12 max-w-2xl mx-auto">
+            <div className="bg-gray-100 dark:bg-neutral-800 rounded-lg p-6 mb-6">
               <div className="flex items-center gap-2 mb-4">
                 <div className="w-3 h-3 bg-red-500 rounded-full"></div>
                 <div className="w-3 h-3 bg-white dark:bg-black rounded-full border"></div>
@@ -177,7 +177,7 @@ export default function LogoMaker() {
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
-              <Card key={index} className="p-6">
+              <Card key={index} className="p-6 bg-white dark:bg-neutral-900">
                 <CardContent className="p-0">
                   <div className="flex items-center gap-1 mb-4">
                     {[...Array(testimonial.rating)].map((_, i) => (
@@ -210,7 +210,7 @@ export default function LogoMaker() {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
-              <Card key={index} className="text-center p-6">
+              <Card key={index} className="text-center p-6 bg-white dark:bg-neutral-900">
                 <CardContent className="p-0">
                   <div className="text-primary mb-4 flex justify-center">
                     {feature.icon}
@@ -225,7 +225,7 @@ export default function LogoMaker() {
       </section>
 
       {/* Screen Recording Demo */}
-      <section className="py-20 px-6 bg-neutral-100 dark:bg-neutral-900">
+      <section className="py-20 px-6 bg-muted/50">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
@@ -237,7 +237,7 @@ export default function LogoMaker() {
           </div>
           
           <div className="relative bg-black rounded-2xl overflow-hidden shadow-2xl">
-            <div className="aspect-video bg-gradient-to-br from-gray-900 to-gray-800 flex items-center justify-center">
+            <div className="aspect-video bg-gradient-to-br from-neutral-900 to-neutral-800 flex items-center justify-center">
               <div className="text-center">
                 <div className="w-20 h-20 bg-neutral-200 dark:bg-neutral-800 rounded-full flex items-center justify-center mb-4 mx-auto">
                   <Play className="h-8 w-8 text-neutral-700 dark:text-neutral-200" />
@@ -265,7 +265,7 @@ export default function LogoMaker() {
             One price, everything included. No subscriptions, no hidden fees.
           </p>
           
-          <Card className="max-w-md mx-auto">
+          <Card className="max-w-md mx-auto bg-white dark:bg-neutral-900">
             <CardContent className="p-8">
               <div className="text-4xl font-bold mb-4">$49</div>
               <CardTitle className="text-xl mb-4">Complete Logo Package</CardTitle>
