@@ -41,7 +41,7 @@ export default function HomeFaq() {
         {faqs.map((item) => (
           <AccordionItem key={item.id} value={item.id}>
             <AccordionTrigger className="text-left">{item.question}</AccordionTrigger>
-            <AccordionContent className="text-white/70">{item.answer}</AccordionContent>
+            <AccordionContent className="text-muted-foreground">{item.answer}</AccordionContent>
           </AccordionItem>
         ))}
       </Accordion>
