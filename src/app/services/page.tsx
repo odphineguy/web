@@ -104,7 +104,7 @@ export default function Services() {
                   <ul className="space-y-2">
                     {service.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center gap-2">
-                        <CheckCircle className="h-4 w-4 text-green-500 flex-shrink-0" />
+                        <CheckCircle className="h-4 w-4 text-neutral-500 dark:text-neutral-400 flex-shrink-0" />
                         <span className="text-sm">{feature}</span>
                       </li>
                     ))}
@@ -129,19 +129,19 @@ export default function Services() {
               </p>
               <div className="space-y-4 mb-8">
                 <div className="flex items-center gap-3">
-                  <CheckCircle className="h-5 w-5 text-green-500" />
+                  <CheckCircle className="h-5 w-5 text-neutral-500 dark:text-neutral-400" />
                   <span>Unlimited logo variations</span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <CheckCircle className="h-5 w-5 text-green-500" />
+                  <CheckCircle className="h-5 w-5 text-neutral-500 dark:text-neutral-400" />
                   <span>Custom fonts and icons</span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <CheckCircle className="h-5 w-5 text-green-500" />
+                  <CheckCircle className="h-5 w-5 text-neutral-500 dark:text-neutral-400" />
                   <span>Instant brand kit generation</span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <CheckCircle className="h-5 w-5 text-green-500" />
+                  <CheckCircle className="h-5 w-5 text-neutral-500 dark:text-neutral-400" />
                   <span>High-resolution downloads</span>
                 </div>
               </div>

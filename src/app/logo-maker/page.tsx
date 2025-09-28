@@ -181,7 +181,7 @@ export default function LogoMaker() {
                 <CardContent className="p-0">
                   <div className="flex items-center gap-1 mb-4">
                     {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key={i} className="h-4 w-4 fill-white text-white dark:fill-white dark:text-white" />
+                      <Star key={i} className="h-4 w-4 fill-neutral-700 text-neutral-700 dark:fill-neutral-300 dark:text-neutral-300" />
                     ))}
                   </div>
                   <p className="text-sm mb-4">&quot;{testimonial.text}&quot;</p>
@@ -239,8 +239,8 @@ export default function LogoMaker() {
           <div className="relative bg-black rounded-2xl overflow-hidden shadow-2xl">
             <div className="aspect-video bg-gradient-to-br from-gray-900 to-gray-800 flex items-center justify-center">
               <div className="text-center">
-                <div className="w-20 h-20 bg-white/10 dark:bg-white/10 rounded-full flex items-center justify-center mb-4 mx-auto">
-                  <Play className="h-8 w-8 text-white" />
+                <div className="w-20 h-20 bg-neutral-200 dark:bg-neutral-800 rounded-full flex items-center justify-center mb-4 mx-auto">
+                  <Play className="h-8 w-8 text-neutral-700 dark:text-neutral-200" />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-2">Logo Maker Demo</h3>
                 <p className="text-gray-400">Click to watch the full demo</p>

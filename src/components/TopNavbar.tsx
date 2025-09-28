@@ -37,7 +37,7 @@ export default function TopNavbar() {
               width={175}
               height={35}
               priority
-              className="block dark:hidden"
+              className="block dark:hidden drop-shadow-[0_1px_1px_rgba(0,0,0,0.25)]"
             />
             <Image
               src="/images/portfolio/abemedia.white.svg?v=2"
@@ -45,7 +45,7 @@ export default function TopNavbar() {
               width={175}
               height={35}
               priority
-              className="hidden dark:block"
+              className="hidden dark:block drop-shadow-[0_1px_1px_rgba(0,0,0,0.35)]"
             />
           </Link>
         </div>
