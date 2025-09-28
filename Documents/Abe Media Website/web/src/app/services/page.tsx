@@ -1,7 +1,8 @@
 import { Metadata } from "next";
+import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { CheckCircle, Code, Palette, Smartphone, Globe, Zap } from "lucide-react";
+import { CheckCircle, Code, Palette, Smartphone, Globe, Zap, ArrowRight } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Services",
@@ -111,6 +112,62 @@ export default function Services() {
                 </CardContent>
               </Card>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Logo Maker Section */}
+      <section className="py-20 px-6 bg-gradient-to-br from-primary/5 to-primary/10">
+        <div className="max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <h2 className="text-3xl md:text-4xl font-bold mb-6">
+                Create Your Logo with Our <span className="text-primary">AI Logo Maker</span>
+              </h2>
+              <p className="text-xl text-muted-foreground mb-8">
+                Design professional logos in minutes with our advanced logo maker. Choose from thousands of unique fonts, icons, and color combinations to create a brand that stands out.
+              </p>
+              <div className="space-y-4 mb-8">
+                <div className="flex items-center gap-3">
+                  <CheckCircle className="h-5 w-5 text-green-500" />
+                  <span>Unlimited logo variations</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <CheckCircle className="h-5 w-5 text-green-500" />
+                  <span>Custom fonts and icons</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <CheckCircle className="h-5 w-5 text-green-500" />
+                  <span>Instant brand kit generation</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <CheckCircle className="h-5 w-5 text-green-500" />
+                  <span>High-resolution downloads</span>
+                </div>
+              </div>
+              <Button size="lg" className="text-lg px-8" asChild>
+                <Link href="/logo-maker">
+                  Try Logo Maker Now
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Link>
+              </Button>
+            </div>
+            <div className="relative">
+              <div className="bg-white dark:bg-gray-900 rounded-lg shadow-2xl p-6 border">
+                <div className="bg-gray-100 dark:bg-gray-800 rounded-md p-4 mb-4">
+                  <div className="flex items-center gap-2 mb-2">
+                    <div className="w-3 h-3 bg-red-500 rounded-full"></div>
+                    <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
+                    <div className="w-3 h-3 bg-green-500 rounded-full"></div>
+                  </div>
+                  <div className="text-sm text-gray-600 dark:text-gray-400">Logo Maker Preview</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-2xl font-bold text-primary mb-2">Your Brand</div>
+                  <div className="text-sm text-muted-foreground">Professional logo design in seconds</div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>

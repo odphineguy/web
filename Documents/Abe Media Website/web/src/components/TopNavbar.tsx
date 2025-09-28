@@ -43,6 +43,7 @@ export default function TopNavbar() {
         <nav className="flex items-center gap-5 md:gap-6 text-sm ml-3 sm:ml-6 md:ml-10">
           <Link href="/" className="opacity-80 hover:opacity-100">Home</Link>
           <Link href="/services" className="opacity-80 hover:opacity-100">Services</Link>
+          <Link href="/logo-maker" className="opacity-80 hover:opacity-100">Logo Maker</Link>
           <Link href="/portfolio" className="opacity-80 hover:opacity-100">Portfolio</Link>
           <Link href="/blog" className="opacity-80 hover:opacity-100">Blog</Link>
           <Link href="/contact" className="opacity-80 hover:opacity-100">Contact</Link>
