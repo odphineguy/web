@@ -52,6 +52,9 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  // Force dynamic rendering to bypass stale cache while we stabilize deploys
+  // @ts-expect-error
+  export const dynamic = "force-dynamic";
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
