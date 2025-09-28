@@ -8,6 +8,11 @@ import { ThemeProvider } from "@/components/ThemeProvider";
 import { Analytics } from "@vercel/analytics/react";
 import { Instagram, Facebook, Music2, Twitter } from "lucide-react";
 
+// Force fresh HTML on production so updates appear immediately
+export const dynamic = "force-dynamic";
+export const revalidate = 0;
+export const fetchCache = "force-no-store";
+
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
