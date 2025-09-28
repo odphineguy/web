@@ -146,7 +146,7 @@ export default function Services() {
                 </div>
               </div>
               <Button size="lg" className="text-lg px-8" asChild>
-                <Link href="/logo-maker">
+                <Link href="/logo-maker" className="flex items-center">
                   Try Logo Maker Now
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
