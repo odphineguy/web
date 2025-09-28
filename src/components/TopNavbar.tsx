@@ -32,7 +32,7 @@ export default function TopNavbar() {
         <div className="flex items-center gap-3">
           <Link href="/" className="hover:opacity-80 transition-opacity">
             <Image
-              src="/images/portfolio/abemedia.black.svg?v=cachebust1"
+              src="/images/portfolio/abemedia.black.svg"
               alt="Abe Media"
               width={175}
               height={35}
@@ -40,7 +40,7 @@ export default function TopNavbar() {
               className="block dark:hidden"
             />
             <Image
-              src="/images/portfolio/abemedia.white.svg?v=cachebust1"
+              src="/images/portfolio/abemedia.white.svg?v=2"
               alt="Abe Media"
               width={175}
               height={35}

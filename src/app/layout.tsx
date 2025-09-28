@@ -52,9 +52,7 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  // Force dynamic rendering to bypass stale cache while we stabilize deploys
-  // @ts-expect-error
-  export const dynamic = "force-dynamic";
+  // Normal static/dynamic behavior restored
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
@@ -71,7 +69,6 @@ export default function RootLayout({
               </div>
               <div className="text-center">
                 <p className="text-xs text-neutral-600 dark:text-white/60">© 2025 AbeMedia, LLC. All rights reserved.</p>
-                <p className="text-[10px] text-neutral-500 dark:text-white/40 mt-1">build: v-live-check</p>
               </div>
               <div className="flex justify-center sm:justify-end text-neutral-600 dark:text-white/70 gap-5">
                 <a href="https://x.com/abe_vision" target="_blank" rel="noreferrer" aria-label="Twitter" className="transition-colors">
