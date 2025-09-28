@@ -117,7 +117,7 @@ export default function Services() {
       </section>
 
       {/* Logo Maker Section */}
-      <section className="py-20 px-6 bg-gradient-to-br from-primary/5 to-primary/10">
+      <section className="py-20 px-6 bg-muted/50">
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
