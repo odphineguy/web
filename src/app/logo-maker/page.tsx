@@ -50,21 +50,22 @@ export default function LogoMaker() {
           </p>
           
           {/* 3D Floating Search Bar */}
-          <div className="relative mb-12 max-w-4xl mx-auto">
-            <div className="bg-white dark:bg-neutral-900 rounded-3xl shadow-[0_20px_50px_rgba(0,0,0,0.15)] p-3 border border-gray-200 dark:border-neutral-700 transform hover:scale-[1.02] transition-all duration-300">
-              <div className="flex items-center gap-3">
+          <div className="relative mb-12 max-w-4xl mx-auto px-4">
+            <div className="bg-white dark:bg-neutral-900 rounded-3xl shadow-[0_20px_50px_rgba(0,0,0,0.15)] p-2 sm:p-3 border border-gray-200 dark:border-neutral-700 transform hover:scale-[1.02] transition-all duration-300">
+              <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-2 sm:gap-3">
                 <Input 
                   value={brandName}
                   onChange={(e) => setBrandName(e.target.value)}
-                  className="flex-1 border-0 shadow-none text-2xl py-8 px-8 bg-transparent focus:ring-0 focus:outline-none rounded-3xl"
+                  className="flex-1 border-0 shadow-none text-lg sm:text-xl md:text-2xl py-4 sm:py-6 md:py-8 px-4 sm:px-6 md:px-8 bg-transparent focus:ring-0 focus:outline-none rounded-2xl sm:rounded-3xl"
                   placeholder="Type a brand name. Keep it short."
                 />
                 <Button 
                   size="lg" 
-                  className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-semibold px-12 py-8 rounded-3xl shadow-[0_8px_25px_rgba(249,115,22,0.4)] hover:shadow-[0_12px_35px_rgba(249,115,22,0.5)] transform hover:scale-105 transition-all duration-300 text-xl"
+                  className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-semibold px-6 sm:px-8 md:px-12 py-4 sm:py-6 md:py-8 rounded-2xl sm:rounded-3xl shadow-[0_8px_25px_rgba(249,115,22,0.4)] hover:shadow-[0_12px_35px_rgba(249,115,22,0.5)] transform hover:scale-105 transition-all duration-300 text-base sm:text-lg md:text-xl whitespace-nowrap"
                 >
-                  Show Me Logo Ideas →
-                  <Sparkles className="ml-2 h-6 w-6" />
+                  <span className="hidden sm:inline">Show Me Logo Ideas →</span>
+                  <span className="sm:hidden">Show Ideas →</span>
+                  <Sparkles className="ml-2 h-4 w-4 sm:h-5 w-5 md:h-6 w-6" />
                 </Button>
               </div>
             </div>
