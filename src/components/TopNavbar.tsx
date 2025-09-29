@@ -5,7 +5,7 @@ import Image from "next/image";
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { ThemeSwitch } from "react-theme-switch-animation";
+import { useModeAnimation, ThemeAnimationType } from "react-theme-switch-animation";
 
 export default function TopNavbar() {
   const { theme, setTheme, resolvedTheme } = useTheme();
@@ -13,6 +13,16 @@ export default function TopNavbar() {
   useEffect(() => setMounted(true), []);
   const isDark = (mounted ? resolvedTheme : undefined) === "dark";
   const { scrollY } = useScroll();
+
+  // Theme animation hook
+  const { ref: themeRef, toggleSwitchTheme } = useModeAnimation({
+    animationType: ThemeAnimationType.CIRCLE,
+    duration: 750,
+    isDarkMode: isDark,
+    onDarkModeChange: (isDark) => {
+      setTheme(isDark ? "dark" : "light");
+    }
+  });
 
   const height = useTransform(scrollY, [0, 200], [88, 56]);
   const paddingX = useTransform(scrollY, [0, 200], [24, 12]);
@@ -55,9 +65,14 @@ export default function TopNavbar() {
           <Link href="/blog" className="opacity-80 hover:opacity-100">Blog</Link>
           <Link href="/contact" className="opacity-80 hover:opacity-100">Contact</Link>
           <Link href="/get-started" className="opacity-80 hover:opacity-100">Get Started</Link>
-          <div className="ml-2">
-            <ThemeSwitch />
-          </div>
+          <button
+            ref={themeRef}
+            onClick={toggleSwitchTheme}
+            aria-label="Toggle theme"
+            className="ml-2 inline-flex h-8 w-8 items-center justify-center rounded-md border border-border opacity-80 hover:opacity-100"
+          >
+            {mounted && (isDark ? "🌙" : "☀️")}
+          </button>
         </nav>
       </motion.div>
     </motion.header>
