@@ -44,13 +44,13 @@ export default function LogoMaker() {
           <h1 className="text-4xl md:text-6xl font-bold mb-6">
             Logo Maker for <span className="text-primary">Cool Brands</span>
           </h1>
-          <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
+          <p className="text-xl text-muted-foreground mb-12 max-w-3xl mx-auto">
             Create professional logos with custom fonts, colors, and icons. 
             Comes with a complete brand kit. Not just another logo maker.
           </p>
           
           {/* Mojomox-style 3D Search Bar */}
-          <div className="relative mb-12 max-w-4xl mx-auto px-4">
+          <div className="relative mb-12 max-w-4xl mx-auto px-4 mt-8">
             <div className="bg-white dark:bg-neutral-900 rounded-full shadow-[0_8px_32px_rgba(0,0,0,0.12)] dark:shadow-[0_8px_32px_rgba(0,0,0,0.3)] p-1 border border-gray-100 dark:border-neutral-800 transform hover:scale-[1.02] transition-all duration-300">
               <div className="flex items-center bg-white dark:bg-neutral-900 rounded-full overflow-hidden">
                 <div className="flex-1 px-6 py-4">
@@ -58,7 +58,7 @@ export default function LogoMaker() {
                     type="text"
                     value={brandName}
                     onChange={(e) => setBrandName(e.target.value)}
-                    className="w-full bg-transparent border-0 outline-none text-lg sm:text-xl md:text-2xl font-medium text-gray-900 dark:text-white placeholder:text-gray-400 dark:placeholder:text-gray-500"
+                    className="w-full bg-transparent border-0 outline-none text-lg sm:text-xl md:text-2xl font-medium text-gray-900 dark:text-white placeholder:text-gray-300 dark:placeholder:text-gray-600"
                     placeholder="Your brand here"
                   />
                 </div>
