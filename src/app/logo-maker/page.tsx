@@ -50,21 +50,21 @@ export default function LogoMaker() {
           </p>
           
           {/* 3D Floating Search Bar */}
-          <div className="relative mb-12 max-w-2xl mx-auto">
-            <div className="bg-white dark:bg-neutral-900 rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.15)] p-2 border border-gray-200 dark:border-neutral-700 transform hover:scale-[1.02] transition-all duration-300">
-              <div className="flex items-center gap-2">
+          <div className="relative mb-12 max-w-4xl mx-auto">
+            <div className="bg-white dark:bg-neutral-900 rounded-3xl shadow-[0_20px_50px_rgba(0,0,0,0.15)] p-3 border border-gray-200 dark:border-neutral-700 transform hover:scale-[1.02] transition-all duration-300">
+              <div className="flex items-center gap-3">
                 <Input 
                   value={brandName}
                   onChange={(e) => setBrandName(e.target.value)}
-                  className="flex-1 border-0 shadow-none text-lg py-4 px-6 bg-transparent focus:ring-0 focus:outline-none"
+                  className="flex-1 border-0 shadow-none text-2xl py-8 px-8 bg-transparent focus:ring-0 focus:outline-none rounded-3xl"
                   placeholder="Type a brand name. Keep it short."
                 />
                 <Button 
                   size="lg" 
-                  className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-semibold px-8 py-4 rounded-xl shadow-[0_8px_25px_rgba(249,115,22,0.4)] hover:shadow-[0_12px_35px_rgba(249,115,22,0.5)] transform hover:scale-105 transition-all duration-300"
+                  className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-semibold px-12 py-8 rounded-3xl shadow-[0_8px_25px_rgba(249,115,22,0.4)] hover:shadow-[0_12px_35px_rgba(249,115,22,0.5)] transform hover:scale-105 transition-all duration-300 text-xl"
                 >
-                  Show Me Logos
-                  <Sparkles className="ml-2 h-5 w-5" />
+                  Show Me Logo Ideas →
+                  <Sparkles className="ml-2 h-6 w-6" />
                 </Button>
               </div>
             </div>
