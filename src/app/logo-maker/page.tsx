@@ -6,12 +6,6 @@ import { Input } from "@/components/ui/input";
 import LogoCarousel from "@/components/LogoCarousel";
 import { 
   CheckCircle, 
-  Star, 
-  Download, 
-  Palette, 
-  Type, 
-  Zap, 
-  ArrowRight,
   Play,
   Sparkles
 } from "lucide-react";
@@ -51,28 +45,6 @@ export default function LogoMaker() {
     }
   ];
 
-  const features = [
-    {
-      icon: <Type className="h-6 w-6" />,
-      title: "Unique Fonts",
-      description: "Choose from thousands of custom fonts you won't find anywhere else"
-    },
-    {
-      icon: <Palette className="h-6 w-6" />,
-      title: "Smart Colors",
-      description: "AI-powered color palettes that work perfectly together"
-    },
-    {
-      icon: <Zap className="h-6 w-6" />,
-      title: "Instant Results",
-      description: "See your logo come to life in real-time as you design"
-    },
-    {
-      icon: <Download className="h-6 w-6" />,
-      title: "High-Res Downloads",
-      description: "Get PNG, SVG, and PDF files in any size you need"
-    }
-  ];
 
   return (
     <div className="min-h-screen bg-background">
@@ -183,33 +155,6 @@ export default function LogoMaker() {
         </div>
       </section>
 
-      {/* Features Grid */}
-      <section className="py-20 px-6">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              Everything custom to create a cool brand
-            </h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Easily create professional logos with unlimited designs, modern and unique fonts, custom symbols, and changeable letters.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (
-              <Card key={index} className="text-center p-6 bg-white dark:bg-neutral-900">
-                <CardContent className="p-0">
-                  <div className="text-primary mb-4 flex justify-center">
-                    {feature.icon}
-                  </div>
-                  <CardTitle className="text-lg mb-3">{feature.title}</CardTitle>
-                  <CardDescription>{feature.description}</CardDescription>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* Screen Recording Demo */}
       <section className="py-20 px-6 bg-muted/50">
@@ -286,21 +231,31 @@ export default function LogoMaker() {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-20 px-6 bg-black text-white dark:bg-black dark:text-white">
+      {/* Big Text Bubble with Orange Button */}
+      <section className="py-20 px-6 bg-gradient-to-br from-orange-50 to-orange-100 dark:from-orange-950/20 dark:to-orange-900/20">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Ready to create your logo?
-          </h2>
-          <p className="text-xl mb-8 opacity-90">
-            Join thousands of creators who have built amazing brands with our logo maker.
-          </p>
-          <Button size="lg" variant="secondary" className="text-lg px-8">
-            Start Creating Now
-            <ArrowRight className="ml-2 h-5 w-5" />
-          </Button>
+          <div className="bg-white dark:bg-neutral-900 rounded-3xl p-12 shadow-2xl border border-orange-200 dark:border-orange-800/30">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900 dark:text-white">
+              Design Your Brand Like You Mean It
+            </h2>
+            <p className="text-xl text-gray-600 dark:text-gray-300 mb-8 max-w-2xl mx-auto">
+              Create professional logos with custom fonts, colors, and icons. 
+              Get a complete brand kit that makes your business look amazing.
+            </p>
+            <Button 
+              size="lg" 
+              className="text-lg px-12 py-4 bg-orange-500 hover:bg-orange-600 text-white font-semibold rounded-xl shadow-[0_8px_25px_rgba(249,115,22,0.4)] hover:shadow-[0_12px_35px_rgba(249,115,22,0.5)] transform hover:scale-105 transition-all duration-300"
+            >
+              <Sparkles className="mr-2 h-5 w-5" />
+              Start Creating Your Logo
+            </Button>
+            <p className="text-sm text-gray-500 dark:text-gray-400 mt-4">
+              Free to try • No credit card required • 17,000+ creators trust us
+            </p>
+          </div>
         </div>
       </section>
+
     </div>
   );
 }
