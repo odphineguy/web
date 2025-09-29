@@ -56,8 +56,11 @@ export default function LogoMaker() {
                 <Input 
                   value={brandName}
                   onChange={(e) => setBrandName(e.target.value)}
-                  className="flex-1 border-0 shadow-none text-lg sm:text-xl md:text-2xl py-4 sm:py-6 md:py-8 px-4 sm:px-6 md:px-8 bg-transparent focus:ring-0 focus:outline-none rounded-2xl sm:rounded-3xl"
-                  placeholder="Type a brand name. Keep it short."
+                  className="flex-1 border-0 shadow-none text-lg sm:text-xl md:text-2xl py-4 sm:py-6 md:py-8 px-4 sm:px-6 md:px-8 bg-transparent focus:ring-0 focus:outline-none rounded-none placeholder:text-gray-400"
+                  placeholder="Type your brand"
+                  style={{ 
+                    borderRadius: '0 50px 50px 0'
+                  }}
                 />
                 <Button 
                   size="lg" 
