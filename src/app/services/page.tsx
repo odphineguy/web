@@ -71,7 +71,7 @@ export default function Services() {
   return (
     <div className="min-h-screen bg-background">
       {/* Hero Section */}
-      <section className="py-20 px-6">
+      <section className="py-20 px-6 bg-gray-100 dark:bg-gray-900">
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-4xl md:text-6xl font-bold mb-6">
             Our <span className="text-primary">Services</span>
@@ -86,7 +86,7 @@ export default function Services() {
       </section>
 
       {/* Services Grid */}
-      <section className="py-20 px-6">
+      <section className="py-20 px-6 bg-gray-100 dark:bg-gray-900">
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
