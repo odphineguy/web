@@ -1,5 +1,7 @@
 "use client";
 
+import { useState, useRef, useEffect } from "react";
+
 interface CarouselImage {
   src: string;
   alt: string;
@@ -12,23 +14,68 @@ interface LogoCarouselProps {
 }
 
 export default function LogoCarousel({ images }: LogoCarouselProps) {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [isDragging, setIsDragging] = useState(false);
+  const [startX, setStartX] = useState(0);
+  const [scrollLeft, setScrollLeft] = useState(0);
+  const carouselRef = useRef<HTMLDivElement>(null);
 
   if (images.length === 0) return null;
 
+  const handleMouseDown = (e: React.MouseEvent) => {
+    setIsDragging(true);
+    setStartX(e.pageX - (carouselRef.current?.offsetLeft || 0));
+    setScrollLeft(carouselRef.current?.scrollLeft || 0);
+  };
+
+  const handleMouseMove = (e: React.MouseEvent) => {
+    if (!isDragging || !carouselRef.current) return;
+    e.preventDefault();
+    const x = e.pageX - (carouselRef.current.offsetLeft || 0);
+    const walk = (x - startX) * 2;
+    carouselRef.current.scrollLeft = scrollLeft - walk;
+  };
+
+  const handleMouseUp = () => {
+    setIsDragging(false);
+  };
+
+  const handleMouseLeave = () => {
+    setIsDragging(false);
+  };
+
+  const handleScroll = () => {
+    if (!carouselRef.current) return;
+    const scrollLeft = carouselRef.current.scrollLeft;
+    const cardWidth = carouselRef.current.scrollWidth / images.length;
+    const newIndex = Math.round(scrollLeft / cardWidth);
+    setCurrentIndex(newIndex);
+  };
+
   return (
     <div className="w-full max-w-6xl mx-auto">
-      {/* Grid Layout with Hover Effects */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {/* Carousel Container */}
+      <div 
+        ref={carouselRef}
+        className="flex gap-6 overflow-x-auto scrollbar-hide cursor-grab active:cursor-grabbing"
+        style={{ scrollSnapType: 'x mandatory' }}
+        onMouseDown={handleMouseDown}
+        onMouseMove={handleMouseMove}
+        onMouseUp={handleMouseUp}
+        onMouseLeave={handleMouseLeave}
+        onScroll={handleScroll}
+      >
         {images.map((image, index) => (
           <div 
             key={index}
-            className="group relative overflow-hidden rounded-2xl bg-white dark:bg-neutral-900 shadow-lg hover:shadow-2xl transition-all duration-500 ease-out hover:scale-105 hover:-translate-y-2"
+            className="group relative flex-shrink-0 w-80 h-80 overflow-hidden rounded-2xl bg-white dark:bg-neutral-900 shadow-lg hover:shadow-2xl transition-all duration-500 ease-out hover:scale-110 hover:-translate-y-4"
+            style={{ scrollSnapAlign: 'start' }}
           >
-            <div className="relative">
+            <div className="relative w-full h-full">
               <img
                 src={image.src}
                 alt={image.alt}
-                className="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-110"
+                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
               />
               {/* Overlay with text - appears on hover */}
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -46,6 +93,29 @@ export default function LogoCarousel({ images }: LogoCarouselProps) {
             {/* Subtle border effect on hover */}
             <div className="absolute inset-0 rounded-2xl border-2 border-transparent group-hover:border-primary/20 transition-colors duration-300"></div>
           </div>
+        ))}
+      </div>
+
+      {/* Thin Slider Indicator */}
+      <div className="flex justify-center mt-8 space-x-2">
+        {images.map((_, index) => (
+          <button
+            key={index}
+            className={`w-2 h-2 rounded-full transition-all duration-300 ${
+              index === currentIndex 
+                ? 'bg-primary w-8' 
+                : 'bg-gray-300 dark:bg-gray-600 hover:bg-gray-400 dark:hover:bg-gray-500'
+            }`}
+            onClick={() => {
+              if (carouselRef.current) {
+                const cardWidth = carouselRef.current.scrollWidth / images.length;
+                carouselRef.current.scrollTo({
+                  left: index * cardWidth,
+                  behavior: 'smooth'
+                });
+              }
+            }}
+          />
         ))}
       </div>
     </div>
