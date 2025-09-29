@@ -4,8 +4,8 @@ import Link from "next/link";
 import Image from "next/image";
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
-import { Sun, Moon } from "lucide-react";
 import { motion, useScroll, useTransform } from "framer-motion";
+import { ThemeSwitch } from "react-theme-switch-animation";
 
 export default function TopNavbar() {
   const { theme, setTheme, resolvedTheme } = useTheme();
@@ -55,13 +55,9 @@ export default function TopNavbar() {
           <Link href="/blog" className="opacity-80 hover:opacity-100">Blog</Link>
           <Link href="/contact" className="opacity-80 hover:opacity-100">Contact</Link>
           <Link href="/get-started" className="opacity-80 hover:opacity-100">Get Started</Link>
-          <button
-            aria-label="Toggle theme"
-            onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-            className="ml-2 inline-flex h-8 w-8 items-center justify-center rounded-md border border-border opacity-80 hover:opacity-100"
-          >
-            {mounted && (isDark ? <Sun className="size-4" /> : <Moon className="size-4" />)}
-          </button>
+          <div className="ml-2">
+            <ThemeSwitch />
+          </div>
         </nav>
       </motion.div>
     </motion.header>
