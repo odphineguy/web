@@ -246,19 +246,19 @@ export default function GetStarted() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-6 bg-primary text-primary-foreground">
+      <section className="py-20 px-6 bg-gray-100 dark:bg-gray-900">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900 dark:text-white">
             Ready to Get Started?
           </h2>
-          <p className="text-xl mb-8 opacity-90">
+          <p className="text-xl mb-8 text-gray-600 dark:text-gray-300">
             Let&apos;s discuss your project and create something amazing together.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" variant="secondary" className="text-lg px-8">
+            <Button size="lg" className="text-lg px-8">
               Start Your Project
             </Button>
-            <Button size="lg" variant="outline" className="text-lg px-8 border-white text-white hover:bg-white hover:text-primary">
+            <Button size="lg" variant="outline" className="text-lg px-8">
               Schedule Consultation
             </Button>
           </div>

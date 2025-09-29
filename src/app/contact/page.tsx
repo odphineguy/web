@@ -7,27 +7,61 @@ export const metadata = {
 export default function ContactPage() {
   return (
     <div className="min-h-screen bg-background text-foreground">
-      <div className="mx-auto max-w-5xl px-6 py-16">
-        <h1 className="text-3xl font-bold tracking-tight text-center">Contact</h1>
-        <p className="mt-2 text-muted-foreground text-center max-w-2xl mx-auto">
-          Paste your component here and I’ll wire it up. For now, this page uses a white background so we can test visuals cleanly.
-        </p>
-        <div className="mt-8">
-          <div className="rounded-lg border p-4">
-            <p className="text-sm text-muted-foreground">Preview area</p>
-            <div className="mt-4 flex items-center justify-center bg-muted p-6 rounded-md">
+      {/* Hero Section */}
+      <section className="py-20 px-6">
+        <div className="max-w-4xl mx-auto text-center">
+          <h1 className="text-4xl md:text-6xl font-bold mb-6">
+            Get in <span className="text-primary">Touch</span>
+          </h1>
+          <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
+            Ready to start your project? Let's discuss your needs and create something amazing together.
+          </p>
+        </div>
+      </section>
+
+      {/* Contact Form Section */}
+      <section className="py-20 px-6 bg-gray-100 dark:bg-gray-900">
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+              Send us a Message
+            </h2>
+            <p className="text-xl text-muted-foreground">
+              Fill out the form below and we'll get back to you within 24 hours.
+            </p>
+          </div>
+          
+          <div className="max-w-2xl mx-auto">
+            <div className="bg-white dark:bg-neutral-900 rounded-2xl p-8 shadow-lg border border-gray-200 dark:border-gray-700">
+              <ContactForm />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Receipt Scanner Demo Section */}
+      <section className="py-20 px-6">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+              Try Our <span className="text-primary">Receipt Scanner</span>
+            </h2>
+            <p className="text-xl text-muted-foreground">
+              Upload a receipt and see our AI-powered scanner in action.
+            </p>
+          </div>
+          
+          <div className="max-w-2xl mx-auto">
+            <div className="bg-white dark:bg-neutral-900 rounded-2xl p-8 shadow-lg border border-gray-200 dark:border-gray-700">
+              <div className="text-center mb-6">
+                <h3 className="text-xl font-semibold mb-2">Receipt Scanner Demo</h3>
+                <p className="text-muted-foreground">Upload an image to get started</p>
+              </div>
               <ReceiptScanner />
             </div>
           </div>
         </div>
-
-        <div className="mt-12 mx-auto w-full max-w-md text-center">
-          <h2 className="text-2xl font-semibold mb-4">Get in touch</h2>
-          <div className="rounded-lg border bg-card p-6 shadow-sm">
-            <ContactForm />
-          </div>
-        </div>
-      </div>
+      </section>
     </div>
   );
 }
