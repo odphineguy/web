@@ -70,11 +70,6 @@ export default function LogoMaker() {
             </div>
           </div>
 
-          <Button size="lg" className="text-lg px-8 mb-4">
-            <Sparkles className="mr-2 h-5 w-5" />
-            Start Creating Your Logo
-          </Button>
-          <p className="text-sm text-muted-foreground">Free to try • No credit card required</p>
         </div>
       </section>
 
