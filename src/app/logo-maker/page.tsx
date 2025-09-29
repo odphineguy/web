@@ -192,9 +192,9 @@ export default function LogoMaker() {
       </section>
 
       {/* Big Text Bubble with Orange Button */}
-      <section className="py-20 px-6 bg-gradient-to-br from-orange-50 to-orange-100 dark:from-orange-950/20 dark:to-orange-900/20">
+      <section className="py-20 px-6 bg-gray-100 dark:bg-gray-900">
         <div className="max-w-4xl mx-auto text-center">
-          <div className="bg-white dark:bg-neutral-900 rounded-3xl p-12 shadow-2xl border border-orange-200 dark:border-orange-800/30">
+          <div className="bg-white dark:bg-neutral-900 rounded-3xl p-12 shadow-2xl border border-gray-200 dark:border-gray-700">
             <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900 dark:text-white">
               Design Your Brand Like You Mean It
             </h2>
