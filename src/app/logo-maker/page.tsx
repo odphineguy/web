@@ -1,8 +1,7 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardTitle } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
+import { Card, CardContent, CardTitle } from "@/components/ui/card";
 import LogoCarousel from "@/components/LogoCarousel";
 import { 
   CheckCircle, 
@@ -12,7 +11,7 @@ import {
 import { useState } from "react";
 
 export default function LogoMaker() {
-  const [brandName, setBrandName] = useState("Your Brand");
+  const [brandName, setBrandName] = useState("");
 
   const carouselImages = [
     {
