@@ -187,14 +187,14 @@ export default function GetStarted() {
               <Card key={index} className={`relative ${plan.popular ? 'border-primary shadow-lg scale-105' : ''}`}>
                 {plan.popular && (
                   <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-primary text-primary-foreground px-4 py-1 rounded-full text-sm font-medium">
+                    <span className="bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-white px-4 py-1 rounded-full text-sm font-medium">
                       Most Popular
                     </span>
                   </div>
                 )}
                 <CardHeader className="text-center">
                   <CardTitle className="text-2xl">{plan.name}</CardTitle>
-                  <div className="text-4xl font-bold text-primary">{plan.price}</div>
+                  <div className="text-4xl font-bold text-gray-900 dark:text-white">{plan.price}</div>
                   <CardDescription>{plan.description}</CardDescription>
                 </CardHeader>
                 <CardContent>
@@ -207,7 +207,7 @@ export default function GetStarted() {
                     ))}
                   </ul>
                   <Button 
-                    className={`w-full ${plan.popular ? 'bg-primary hover:bg-primary/90' : ''}`}
+                    className={`w-full ${plan.popular ? 'bg-gray-900 dark:bg-white text-white dark:text-gray-900 hover:bg-gray-800 dark:hover:bg-gray-100' : ''}`}
                     variant={plan.popular ? 'default' : 'outline'}
                   >
                     {plan.name === 'Enterprise' ? 'Contact Us' : 'Get Started'}
