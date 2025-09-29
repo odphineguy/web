@@ -3,6 +3,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
+import LogoCarousel from "@/components/LogoCarousel";
 import { 
   CheckCircle, 
   Star, 
@@ -29,24 +30,24 @@ export default function LogoMaker() {
     { id: "elegant", name: "Elegant", preview: "Your Brand" }
   ];
 
-  const testimonials = [
+  const carouselImages = [
     {
-      name: "Sarah Johnson",
-      company: "TechStart Inc.",
-      rating: 5,
-      text: "Created an amazing logo in just 5 minutes! The brand kit feature is incredible."
+      src: "/images/logo-maker/bloos.png",
+      alt: "Bloos Logo Design",
+      title: "Bloos Brand Identity",
+      description: "Modern logo design with custom typography and color palette"
     },
     {
-      name: "Mike Chen",
-      company: "Creative Agency",
-      rating: 5,
-      text: "This tool saved me hours of work. The font combinations are perfect."
+      src: "/images/logo-maker/chico.png",
+      alt: "Chico Logo Design", 
+      title: "Chico Brand Kit",
+      description: "Complete brand identity with logo, colors, and typography"
     },
     {
-      name: "Lisa Rodriguez",
-      company: "Boutique Store",
-      rating: 5,
-      text: "Professional results without the professional price. Love it!"
+      src: "/images/logo-maker/magnet.png",
+      alt: "Magnet Logo Design",
+      title: "Magnet Brand Identity", 
+      description: "Professional logo with unique visual elements and modern styling"
     }
   ];
 
@@ -169,30 +170,16 @@ export default function LogoMaker() {
         </div>
       </section>
 
-      {/* Social Proof */}
+      {/* Logo Examples Carousel */}
       <section className="py-20 px-6 bg-muted/50">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl font-bold mb-8">
-            Trusted by 17,000+ creators in 38 countries
+        <div className="max-w-6xl mx-auto text-center">
+          <h2 className="text-3xl font-bold mb-4">
+            Logo Ideas That Don&apos;t Look Like Ideas
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
-              <Card key={index} className="p-6 bg-white dark:bg-neutral-900">
-                <CardContent className="p-0">
-                  <div className="flex items-center gap-1 mb-4">
-                    {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key={i} className="h-4 w-4 fill-neutral-700 text-neutral-700 dark:fill-neutral-300 dark:text-neutral-300" />
-                    ))}
-                  </div>
-                  <p className="text-sm mb-4">&quot;{testimonial.text}&quot;</p>
-                  <div>
-                    <div className="font-semibold">{testimonial.name}</div>
-                    <div className="text-sm text-muted-foreground">{testimonial.company}</div>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
+          <p className="text-xl text-muted-foreground mb-12">
+            See real examples of professional logos created with our logo maker
+          </p>
+          <LogoCarousel images={carouselImages} />
         </div>
       </section>
 
