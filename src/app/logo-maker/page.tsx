@@ -13,16 +13,6 @@ import { useState } from "react";
 
 export default function LogoMaker() {
   const [brandName, setBrandName] = useState("Your Brand");
-  const [selectedStyle, setSelectedStyle] = useState("modern");
-
-  const logoStyles = [
-    { id: "modern", name: "Modern", preview: "Your Brand" },
-    { id: "minimalist", name: "Minimalist", preview: "YOUR BRAND" },
-    { id: "vintage", name: "Vintage", preview: "Your Brand" },
-    { id: "handwritten", name: "Handwritten", preview: "Your Brand" },
-    { id: "bold", name: "Bold", preview: "YOUR BRAND" },
-    { id: "elegant", name: "Elegant", preview: "Your Brand" }
-  ];
 
   const carouselImages = [
     {
@@ -59,51 +49,23 @@ export default function LogoMaker() {
             Comes with a complete brand kit. Not just another logo maker.
           </p>
           
-          {/* Logo Preview Demo */}
-          <div className="bg-white dark:bg-neutral-900 rounded-2xl shadow-2xl p-8 mb-12 max-w-2xl mx-auto">
-            <div className="bg-gray-100 dark:bg-neutral-800 rounded-lg p-6 mb-6">
-              <div className="flex items-center gap-2 mb-4">
-                <div className="w-3 h-3 bg-red-500 rounded-full"></div>
-                <div className="w-3 h-3 bg-white dark:bg-black rounded-full border"></div>
-                <div className="w-3 h-3 bg-green-500 rounded-full"></div>
-                <span className="ml-4 text-sm text-gray-600 dark:text-gray-400">Logo Maker Live Preview</span>
-              </div>
-              <div className="text-center">
-                <div className="text-4xl font-bold text-primary mb-2" style={{ fontFamily: selectedStyle === 'bold' ? 'Arial Black' : 'Inter' }}>
-                  {brandName}
-                </div>
-                <div className="text-sm text-muted-foreground">Professional logo design in seconds</div>
-              </div>
-            </div>
-            
-            <div className="space-y-4">
-              <div>
-                <label className="block text-sm font-medium mb-2">Brand Name</label>
+          {/* 3D Floating Search Bar */}
+          <div className="relative mb-12 max-w-2xl mx-auto">
+            <div className="bg-white dark:bg-neutral-900 rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.15)] p-2 border border-gray-200 dark:border-neutral-700 transform hover:scale-[1.02] transition-all duration-300">
+              <div className="flex items-center gap-2">
                 <Input 
                   value={brandName}
                   onChange={(e) => setBrandName(e.target.value)}
-                  className="text-center text-lg"
-                  placeholder="Enter your brand name"
+                  className="flex-1 border-0 shadow-none text-lg py-4 px-6 bg-transparent focus:ring-0 focus:outline-none"
+                  placeholder="Type a brand name. Keep it short."
                 />
-              </div>
-              
-              <div>
-                <label className="block text-sm font-medium mb-2">Logo Style</label>
-                <div className="grid grid-cols-3 gap-2">
-                  {logoStyles.map((style) => (
-                    <button
-                      key={style.id}
-                      onClick={() => setSelectedStyle(style.id)}
-                      className={`p-3 rounded-lg border text-sm transition-colors ${
-                        selectedStyle === style.id 
-                          ? 'border-primary bg-primary/10 text-primary' 
-                          : 'border-border hover:border-primary/50'
-                      }`}
-                    >
-                      {style.name}
-                    </button>
-                  ))}
-                </div>
+                <Button 
+                  size="lg" 
+                  className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-semibold px-8 py-4 rounded-xl shadow-[0_8px_25px_rgba(249,115,22,0.4)] hover:shadow-[0_12px_35px_rgba(249,115,22,0.5)] transform hover:scale-105 transition-all duration-300"
+                >
+                  Show Me Logos
+                  <Sparkles className="ml-2 h-5 w-5" />
+                </Button>
               </div>
             </div>
           </div>
