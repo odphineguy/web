@@ -101,16 +101,16 @@ export default function TopNavbar() {
           initial={{ opacity: 0, height: 0 }}
           animate={{ opacity: 1, height: "auto" }}
           exit={{ opacity: 0, height: 0 }}
-          className="md:hidden bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 border-t border-border"
+          className="md:hidden bg-white/95 dark:bg-neutral-900/95 backdrop-blur supports-[backdrop-filter]:bg-white/95 dark:supports-[backdrop-filter]:bg-neutral-900/95 border-t border-border"
         >
           <nav className="flex flex-col py-4 px-6 space-y-3">
-            <Link href="/" className="opacity-80 hover:opacity-100 py-2" onClick={() => setMobileMenuOpen(false)}>Home</Link>
-            <Link href="/services" className="opacity-80 hover:opacity-100 py-2" onClick={() => setMobileMenuOpen(false)}>Services</Link>
-            <Link href="/logo-maker" className="opacity-80 hover:opacity-100 py-2" onClick={() => setMobileMenuOpen(false)}>Logo Maker</Link>
-            <Link href="/portfolio" className="opacity-80 hover:opacity-100 py-2" onClick={() => setMobileMenuOpen(false)}>Portfolio</Link>
-            <Link href="/blog" className="opacity-80 hover:opacity-100 py-2" onClick={() => setMobileMenuOpen(false)}>Blog</Link>
-            <Link href="/contact" className="opacity-80 hover:opacity-100 py-2" onClick={() => setMobileMenuOpen(false)}>Contact</Link>
-            <Link href="/get-started" className="opacity-80 hover:opacity-100 py-2" onClick={() => setMobileMenuOpen(false)}>Get Started</Link>
+            <Link href="/" className="text-gray-900 dark:text-white opacity-80 hover:opacity-100 py-2" onClick={() => setMobileMenuOpen(false)}>Home</Link>
+            <Link href="/services" className="text-gray-900 dark:text-white opacity-80 hover:opacity-100 py-2" onClick={() => setMobileMenuOpen(false)}>Services</Link>
+            <Link href="/logo-maker" className="text-gray-900 dark:text-white opacity-80 hover:opacity-100 py-2" onClick={() => setMobileMenuOpen(false)}>Logo Maker</Link>
+            <Link href="/portfolio" className="text-gray-900 dark:text-white opacity-80 hover:opacity-100 py-2" onClick={() => setMobileMenuOpen(false)}>Portfolio</Link>
+            <Link href="/blog" className="text-gray-900 dark:text-white opacity-80 hover:opacity-100 py-2" onClick={() => setMobileMenuOpen(false)}>Blog</Link>
+            <Link href="/contact" className="text-gray-900 dark:text-white opacity-80 hover:opacity-100 py-2" onClick={() => setMobileMenuOpen(false)}>Contact</Link>
+            <Link href="/get-started" className="text-gray-900 dark:text-white opacity-80 hover:opacity-100 py-2" onClick={() => setMobileMenuOpen(false)}>Get Started</Link>
           </nav>
         </motion.div>
       )}
