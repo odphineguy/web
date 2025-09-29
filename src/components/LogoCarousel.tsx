@@ -68,7 +68,7 @@ export default function LogoCarousel({ images }: LogoCarouselProps) {
         {images.map((image, index) => (
           <div 
             key={index}
-            className="group relative flex-shrink-0 w-80 h-80 overflow-hidden rounded-2xl bg-white dark:bg-neutral-900 shadow-lg hover:shadow-2xl transition-all duration-500 ease-out hover:scale-110 hover:-translate-y-4"
+            className="group relative flex-shrink-0 w-96 h-80 overflow-hidden rounded-2xl bg-white dark:bg-neutral-900 shadow-lg hover:shadow-2xl transition-all duration-500 ease-out hover:scale-110 hover:-translate-y-4"
             style={{ scrollSnapAlign: 'start' }}
           >
             <div className="relative w-full h-full">
