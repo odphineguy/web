@@ -14,7 +14,7 @@ export default function ContactPage() {
             Get in <span className="text-primary">Touch</span>
           </h1>
           <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Ready to start your project? Let's discuss your needs and create something amazing together.
+            Ready to start your project? Let&apos;s discuss your needs and create something amazing together.
           </p>
         </div>
       </section>
@@ -27,7 +27,7 @@ export default function ContactPage() {
               Send us a Message
             </h2>
             <p className="text-xl text-muted-foreground">
-              Fill out the form below and we'll get back to you within 24 hours.
+              Fill out the form below and we&apos;ll get back to you within 24 hours.
             </p>
           </div>
           
