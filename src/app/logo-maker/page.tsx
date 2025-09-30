@@ -114,7 +114,7 @@ export default function LogoMaker() {
                     type="text"
                     value={brandName}
                     onChange={(e) => setBrandName(e.target.value)}
-                    className="w-full bg-white dark:bg-white border-0 outline-none text-lg sm:text-xl md:text-2xl font-medium text-gray-900 dark:text-gray-900 placeholder:text-gray-300 dark:placeholder:text-gray-500"
+                    className="w-full bg-transparent border-0 outline-none text-lg sm:text-xl md:text-2xl font-medium text-gray-900 dark:text-white placeholder:text-gray-300 dark:placeholder:text-gray-400"
                     placeholder="Your brand here"
                   />
                 </div>
