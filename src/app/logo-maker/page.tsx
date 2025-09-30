@@ -36,9 +36,9 @@ export default function LogoMaker() {
 
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-gray-100 dark:bg-gray-900">
       {/* Hero Section */}
-      <section className="py-20 px-6 bg-background">
+      <section className="py-20 px-6">
         <div className="max-w-6xl mx-auto text-center">
           <h1 className="text-4xl md:text-6xl font-bold mb-6">
             Logo Maker for <span className="text-primary">Cool Brands</span>
