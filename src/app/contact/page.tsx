@@ -13,9 +13,6 @@ export default function ContactPage() {
           <h1 className="text-4xl md:text-6xl font-bold mb-6">
             Get in <span className="text-primary">Touch</span>
           </h1>
-          <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Ready to start your project? Let&apos;s discuss your needs and create something amazing together.
-          </p>
         </div>
       </section>
 
