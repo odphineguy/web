@@ -12,7 +12,7 @@ export default function ContactPage() {
       <section className="py-20 px-6 bg-gray-100 dark:bg-gray-900">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+            <h2 className="text-4xl md:text-6xl font-bold mb-6">
               Send us a <span className="text-primary">Message</span>
             </h2>
             <p className="text-xl text-muted-foreground">
