@@ -1,7 +1,7 @@
 "use client";
 export default function ReceiptScanner() {
   return (
-    <div className="relative w-64 h-96 rounded-xl border border-gray-300 shadow-lg overflow-hidden bg-white">
+    <div className="relative w-64 h-96 rounded-xl border border-gray-300 shadow-lg overflow-hidden bg-white mx-auto">
       {/* Receipt background */}
       <div
         className="absolute inset-0 bg-center bg-contain bg-no-repeat"
