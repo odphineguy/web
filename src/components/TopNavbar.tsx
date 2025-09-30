@@ -20,7 +20,6 @@ export default function TopNavbar() {
   const { ref: themeRef, toggleSwitchTheme } = useModeAnimation({
     animationType: ThemeAnimationType.CIRCLE,
     duration: 750,
-    origin: { x: '85%', y: '10%' }, // Position from top-right where the button is located
     isDarkMode: isDark,
     onDarkModeChange: (isDark) => {
       setTheme(isDark ? "dark" : "light");
