@@ -7,14 +7,6 @@ export const metadata = {
 export default function ContactPage() {
   return (
     <div className="min-h-screen bg-gray-100 dark:bg-gray-900 text-foreground">
-      {/* Hero Section */}
-      <section className="py-20 px-6">
-        <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6">
-            Get in <span className="text-primary">Touch</span>
-          </h1>
-        </div>
-      </section>
 
       {/* Contact Form Section */}
       <section className="py-20 px-6 bg-gray-100 dark:bg-gray-900">
