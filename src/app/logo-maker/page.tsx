@@ -31,6 +31,63 @@ export default function LogoMaker() {
       alt: "Magnet Logo Design",
       title: "Magnet Brand Identity", 
       description: "Professional logo with unique visual elements and modern styling"
+    },
+    {
+      src: "/images/logo-maker/wav.jpeg",
+      alt: "Wav Logo Design",
+      title: "Wav Brand Identity",
+      description: "Creative logo design with wave-inspired elements and modern aesthetics"
+    }
+  ];
+
+  const sliderImages = [
+    {
+      src: "/images/slider/avanti.png",
+      alt: "Avanti Logo Design",
+      title: "Avanti Brand Identity",
+      description: "Professional logo design with clean typography and modern styling"
+    },
+    {
+      src: "/images/slider/paranoid.png",
+      alt: "Paranoid Logo Design",
+      title: "Paranoid Brand Kit",
+      description: "Bold logo design with striking visual elements and contemporary feel"
+    },
+    {
+      src: "/images/slider/prolinea.jpeg",
+      alt: "Prolinea Logo Design",
+      title: "Prolinea Brand Identity",
+      description: "Corporate logo design with professional typography and clean aesthetics"
+    },
+    {
+      src: "/images/slider/sunshine.png",
+      alt: "Sunshine Logo Design",
+      title: "Sunshine Brand Kit",
+      description: "Bright and energetic logo design with vibrant colors and modern styling"
+    },
+    {
+      src: "/images/slider/tebinork.png",
+      alt: "Tebinork Logo Design",
+      title: "Tebinork Brand Identity",
+      description: "Tech-focused logo design with innovative visual elements and modern appeal"
+    },
+    {
+      src: "/images/slider/volkga.png",
+      alt: "Volkga Logo Design",
+      title: "Volkga Brand Kit",
+      description: "Strong logo design with bold typography and distinctive visual identity"
+    },
+    {
+      src: "/images/slider/zain.png",
+      alt: "Zain Logo Design",
+      title: "Zain Brand Identity",
+      description: "Elegant logo design with sophisticated typography and refined aesthetics"
+    },
+    {
+      src: "/images/slider/zunga.png",
+      alt: "Zunga Logo Design",
+      title: "Zunga Brand Kit",
+      description: "Creative logo design with unique visual elements and modern styling"
     }
   ];
 
@@ -57,7 +114,7 @@ export default function LogoMaker() {
                     type="text"
                     value={brandName}
                     onChange={(e) => setBrandName(e.target.value)}
-                    className="w-full bg-transparent border-0 outline-none text-lg sm:text-xl md:text-2xl font-medium text-gray-900 dark:text-white placeholder:text-gray-300 dark:placeholder:text-gray-600"
+                    className="w-full bg-white dark:bg-white border-0 outline-none text-lg sm:text-xl md:text-2xl font-medium text-gray-900 dark:text-gray-900 placeholder:text-gray-300 dark:placeholder:text-gray-500"
                     placeholder="Your brand here"
                   />
                 </div>
@@ -112,6 +169,19 @@ export default function LogoMaker() {
             See real examples of professional logos created with our logo maker
           </p>
           <LogoCarousel images={carouselImages} />
+        </div>
+      </section>
+
+      {/* Second Carousel - Slider Images */}
+      <section className="py-20 px-6">
+        <div className="max-w-6xl mx-auto text-center">
+          <h2 className="text-3xl font-bold mb-4">
+            More Logo Examples
+          </h2>
+          <p className="text-xl text-muted-foreground mb-12">
+            Additional professional logo designs showcasing our logo maker capabilities
+          </p>
+          <LogoCarousel images={sliderImages} />
         </div>
       </section>
 

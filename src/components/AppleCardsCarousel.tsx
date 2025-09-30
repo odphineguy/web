@@ -30,9 +30,9 @@ export function AppleCardsCarousel({ items }: AppleCardsCarouselProps) {
           {items.map((item, index) => (
             <CarouselItem key={item.id} className="basis-full sm:basis-1/2 lg:basis-1/3">
               <motion.article
-                whileHover={{ y: -4 }}
+                whileHover={{ y: -4, scale: 1.05 }}
                 transition={{ type: "spring", stiffness: 250, damping: 20 }}
-                className="rounded-xl border border-border bg-card text-card-foreground shadow-lg hover:shadow-xl transition-shadow overflow-hidden"
+                className="rounded-xl border border-border bg-card text-card-foreground shadow-lg hover:shadow-2xl transition-all duration-500 ease-out overflow-hidden group"
               >
                 <div className="relative aspect-[9/19] w-[85%] mx-auto">
                   <Image
