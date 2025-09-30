@@ -1,5 +1,4 @@
 import { HeroParallax } from "@/components/ui/hero-parallax";
-import HomeFaq from "@/components/HomeFaq";
 
 const products = [
   {
@@ -119,7 +118,6 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-gray-100 dark:bg-gray-900">
       <HeroParallax products={products} />
-      <HomeFaq />
     </div>
   );
 }

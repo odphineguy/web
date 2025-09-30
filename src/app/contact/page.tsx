@@ -13,7 +13,7 @@ export default function ContactPage() {
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              Send us a Message
+              Send us a <span className="text-primary">Message</span>
             </h2>
             <p className="text-xl text-muted-foreground">
               Fill out the form below and we&apos;ll get back to you within 24 hours.
