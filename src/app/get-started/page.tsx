@@ -171,7 +171,7 @@ export default function GetStarted() {
       </section>
 
       {/* Pricing Plans */}
-      <section className="py-20 px-6 bg-muted/50">
+      <section className="py-20 px-6 bg-gray-100 dark:bg-gray-900">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">

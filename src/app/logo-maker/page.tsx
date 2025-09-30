@@ -160,7 +160,7 @@ export default function LogoMaker() {
       </section>
 
       {/* Logo Examples Carousel */}
-      <section className="py-20 px-6 bg-muted/50">
+      <section className="py-20 px-6 bg-gray-100 dark:bg-gray-900">
         <div className="max-w-6xl mx-auto text-center">
           <h2 className="text-3xl font-bold mb-4">
             Logo Ideas That Don&apos;t Look Like Ideas
@@ -187,7 +187,7 @@ export default function LogoMaker() {
 
 
       {/* Screen Recording Demo */}
-      <section className="py-20 px-6 bg-muted/50">
+      <section className="py-20 px-6 bg-gray-100 dark:bg-gray-900">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
