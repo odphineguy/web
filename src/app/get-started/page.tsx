@@ -83,9 +83,9 @@ export default function GetStarted() {
       <section className="py-12 px-6">
         <div className="max-w-md mx-auto">
           <Tabs value={isLogin ? "login" : "register"} onValueChange={(value) => setIsLogin(value === "login")}>
-            <TabsList className="grid w-full grid-cols-2">
-              <TabsTrigger value="login">Login</TabsTrigger>
-              <TabsTrigger value="register">Register</TabsTrigger>
+            <TabsList className="grid w-full grid-cols-2 rounded-full p-1">
+              <TabsTrigger value="login" className="rounded-full data-[state=active]:bg-gradient-to-r data-[state=active]:from-orange-500 data-[state=active]:to-orange-600 data-[state=active]:text-white data-[state=active]:shadow-lg transition-all duration-300">Login</TabsTrigger>
+              <TabsTrigger value="register" className="rounded-full data-[state=active]:bg-gradient-to-r data-[state=active]:from-orange-500 data-[state=active]:to-orange-600 data-[state=active]:text-white data-[state=active]:shadow-lg transition-all duration-300">Register</TabsTrigger>
             </TabsList>
             
             <TabsContent value="login">
