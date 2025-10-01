@@ -33,9 +33,9 @@ const items: AppleCardItem[] = [
 
 export default function PortfolioPage() {
   return (
-    <div className="min-h-screen bg-gray-100 dark:bg-gray-900 px-6 py-16 sm:px-10">
-      <h1 className="text-4xl md:text-6xl font-bold mb-8 text-center">
-        The <span className="text-primary">Portfolio</span>
+    <div className="min-h-screen bg-white dark:bg-black px-6 pt-8 md:pt-12 pb-16 sm:px-10">
+      <h1 className="text-5xl md:text-7xl font-bold mb-12 text-center">
+        The <span className="text-orange-500">Portfolio</span>
       </h1>
       <AppleCardsCarousel items={items} />
     </div>

@@ -2,7 +2,7 @@
 
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardTitle } from "@/components/ui/card";
-import LogoCarousel from "@/components/LogoCarousel";
+import SwiperLogoCarousel from "@/components/SwiperLogoCarousel";
 import { 
   CheckCircle, 
   Play,
@@ -93,38 +93,41 @@ export default function LogoMaker() {
 
 
   return (
-    <div className="min-h-screen bg-gray-100 dark:bg-gray-900">
+    <div className="min-h-screen bg-white dark:bg-black">
       {/* Hero Section */}
-      <section className="py-20 px-6">
-        <div className="max-w-6xl mx-auto text-center">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6">
-            Logo Maker for <span className="text-primary">Cool Brands</span>
+      <section className="pt-8 md:pt-12 pb-8 md:pb-10 px-6">
+        <div className="max-w-7xl mx-auto">
+          <h1 className="text-6xl md:text-8xl lg:text-9xl font-black mt-2 pb-3 leading-tight tracking-tighter text-left" style={{ fontWeight: 900 }}>
+            Logo Maker by <span className="text-orange-500">Abe Media</span>
           </h1>
-          <p className="text-xl text-muted-foreground mb-12 max-w-3xl mx-auto">
-            Create professional logos with custom fonts, colors, and icons. 
-            Comes with a complete brand kit. Not just another logo maker.
+          <p className="text-xl md:text-2xl text-gray-600 dark:text-gray-400 mb-6 font-light text-left">
+            Comes with a real Brand Kit inspired by AI.
           </p>
           
-          {/* Mojomox-style 3D Search Bar */}
-          <div className="relative mb-12 max-w-4xl mx-auto px-4 mt-8">
-            <div className="bg-white dark:bg-neutral-900 rounded-full shadow-[0_8px_32px_rgba(0,0,0,0.12)] dark:shadow-[0_8px_32px_rgba(0,0,0,0.3)] p-1 border border-gray-100 dark:border-neutral-800 transform hover:scale-[1.02] transition-all duration-300">
-              <div className="flex items-center bg-white dark:bg-neutral-900 rounded-full overflow-hidden">
-                <div className="flex-1 px-6 py-4">
+          {/* Mojomox-style 3D Search Bar - Full Width */}
+          <div className="relative mb-16 max-w-7xl mx-auto px-6 mt-12">
+            <div className="bg-white dark:bg-neutral-900 rounded-3xl md:rounded-full shadow-[0_20px_60px_-10px_rgba(0,0,0,0.4)] dark:shadow-[0_20px_60px_-10px_rgba(0,0,0,0.8)] p-3 md:p-2 border border-gray-200 dark:border-neutral-700 transform hover:scale-[1.005] hover:shadow-[0_30px_80px_-10px_rgba(0,0,0,0.5)] dark:hover:shadow-[0_30px_80px_-10px_rgba(0,0,0,0.9)] transition-all duration-300">
+              <div className="flex flex-col md:flex-row items-stretch md:items-center bg-white dark:bg-neutral-900 rounded-3xl md:rounded-full overflow-hidden gap-3 md:gap-0">
+                <div className="flex-1 px-6 md:px-8 py-4 md:py-5 border-2 md:border-0 border-gray-200 dark:border-neutral-700 rounded-full md:rounded-none">
                   <input
                     type="text"
+                    id="brandname"
+                    name="brand"
                     value={brandName}
                     onChange={(e) => setBrandName(e.target.value)}
-                    className="w-full bg-transparent border-0 outline-none text-lg sm:text-xl md:text-2xl font-medium text-gray-900 dark:text-white placeholder:text-gray-300 dark:placeholder:text-gray-400"
-                    placeholder="Your brand here"
+                    autoComplete="off"
+                    maxLength={40}
+                    autoFocus
+                    className="w-full bg-transparent border-0 outline-none text-xl md:text-2xl lg:text-3xl font-medium text-gray-900 dark:text-white placeholder:text-gray-400 dark:placeholder:text-gray-500"
+                    placeholder="Type a brand name. Coming soon..."
                   />
                 </div>
                 <Button 
                   size="lg" 
-                  className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-semibold px-6 sm:px-8 md:px-10 py-4 sm:py-5 md:py-6 rounded-full shadow-[0_4px_16px_rgba(249,115,22,0.3)] hover:shadow-[0_6px_20px_rgba(249,115,22,0.4)] transform hover:scale-105 transition-all duration-300 text-base sm:text-lg md:text-xl whitespace-nowrap mr-1"
+                  className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-semibold px-8 md:px-10 lg:px-14 py-6 md:py-7 lg:py-8 rounded-full shadow-[0_8px_25px_rgba(249,115,22,0.4)] hover:shadow-[0_12px_35px_rgba(249,115,22,0.5)] transform hover:scale-105 transition-all duration-300 text-lg md:text-xl lg:text-2xl whitespace-nowrap md:mr-2 mx-3 md:mx-0"
                 >
-                  <span className="hidden sm:inline">Show Me Logo Ideas →</span>
-                  <span className="sm:hidden">Show Ideas →</span>
-                  <Sparkles className="ml-2 h-4 w-4 sm:h-5 w-5 md:h-6 w-6" />
+                  Show Me Logo Ideas →
+                  <Sparkles className="ml-2 h-5 w-5 md:h-6 w-6 lg:h-7 w-7" />
                 </Button>
               </div>
             </div>
@@ -134,24 +137,24 @@ export default function LogoMaker() {
       </section>
 
       {/* What is Logo Maker */}
-      <section className="py-20 px-6">
-        <div className="max-w-4xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+      <section className="py-12 px-6 bg-gray-50 dark:bg-neutral-950">
+        <div className="max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
             <div>
-              <h3 className="text-xl font-bold mb-4">What it is</h3>
-              <p className="text-muted-foreground">
+              <h3 className="text-2xl font-bold mb-4 text-gray-900 dark:text-white">What it is</h3>
+              <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
                 A modern logo maker for startups and small businesses. Type your brand name and see unique logos with custom fonts, colors, and icons.
               </p>
             </div>
             <div>
-              <h3 className="text-xl font-bold mb-4">Who it&apos;s for</h3>
-              <p className="text-muted-foreground">
+              <h3 className="text-2xl font-bold mb-4 text-gray-900 dark:text-white">Who it&apos;s for</h3>
+              <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
                 DIY creators and designers who need fast results. Great for new brands, rebrands, or quick prototypes.
               </p>
             </div>
             <div>
-              <h3 className="text-xl font-bold mb-4">Why it&apos;s different</h3>
-              <p className="text-muted-foreground">
+              <h3 className="text-2xl font-bold mb-4 text-gray-900 dark:text-white">Why it&apos;s different</h3>
+              <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
                 Exclusive in-house typefaces and icons. Unlimited edits included so your logo can evolve with your business.
               </p>
             </div>
@@ -160,40 +163,44 @@ export default function LogoMaker() {
       </section>
 
       {/* Logo Examples Carousel */}
-      <section className="py-20 px-6 bg-gray-100 dark:bg-gray-900">
-        <div className="max-w-6xl mx-auto text-center">
-          <h2 className="text-3xl font-bold mb-4">
-            Logo Ideas That Don&apos;t Look Like Ideas
+      <section className="py-16 bg-white dark:bg-black">
+        <div className="max-w-6xl mx-auto text-center px-6 mb-12">
+          <h2 className="text-4xl md:text-6xl font-bold mb-6 text-gray-900 dark:text-white leading-tight">
+            Fonts That Don&apos;t Look Like It&apos;s 2015
           </h2>
-          <p className="text-xl text-muted-foreground mb-12">
-            See real examples of professional logos created with our logo maker
+          <p className="text-lg md:text-xl text-gray-600 dark:text-gray-400 font-light">
+            See real examples of professional fonts created with our logo maker.
           </p>
-          <LogoCarousel images={carouselImages} />
+        </div>
+        <div className="w-full">
+          <SwiperLogoCarousel images={carouselImages} />
         </div>
       </section>
 
       {/* Second Carousel - Slider Images */}
-      <section className="py-20 px-6">
-        <div className="max-w-6xl mx-auto text-center">
-          <h2 className="text-3xl font-bold mb-4">
-            More Logo Examples
+      <section className="py-16 bg-gray-50 dark:bg-neutral-950">
+        <div className="max-w-6xl mx-auto text-center px-6 mb-12">
+          <h2 className="text-4xl md:text-6xl font-bold mb-6 text-gray-900 dark:text-white leading-tight">
+            More Font Examples
           </h2>
-          <p className="text-xl text-muted-foreground mb-12">
-            Additional professional logo designs showcasing our logo maker capabilities
+          <p className="text-lg md:text-xl text-gray-600 dark:text-gray-400 font-light">
+            Additional professional font designs showcasing our logo maker capabilities
           </p>
-          <LogoCarousel images={sliderImages} />
+        </div>
+        <div className="w-full">
+          <SwiperLogoCarousel images={sliderImages} />
         </div>
       </section>
 
 
       {/* Screen Recording Demo */}
-      <section className="py-20 px-6 bg-gray-100 dark:bg-gray-900">
+      <section className="py-16 px-6 bg-white dark:bg-black">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+            <h2 className="text-4xl md:text-6xl font-bold mb-6 text-gray-900 dark:text-white leading-tight">
               See it in action
             </h2>
-            <p className="text-xl text-muted-foreground">
+            <p className="text-lg md:text-xl text-gray-600 dark:text-gray-400 font-light">
               Watch how easy it is to create a professional logo in minutes
             </p>
           </div>
@@ -218,16 +225,16 @@ export default function LogoMaker() {
       </section>
 
       {/* Pricing */}
-      <section className="py-20 px-6">
+      <section className="py-16 px-6 bg-gray-50 dark:bg-neutral-950">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
+          <h2 className="text-4xl md:text-6xl font-bold mb-6 text-gray-900 dark:text-white leading-tight">
             Simple, transparent pricing
           </h2>
-          <p className="text-xl text-muted-foreground mb-12">
+          <p className="text-lg md:text-xl text-gray-600 dark:text-gray-400 font-light mb-12">
             One price, everything included. No subscriptions, no hidden fees.
           </p>
           
-          <Card className="max-w-md mx-auto bg-white dark:bg-neutral-900">
+          <Card className="max-w-md mx-auto bg-white dark:bg-neutral-900 rounded-3xl">
             <CardContent className="p-8">
               <div className="text-4xl font-bold mb-4">$49</div>
               <CardTitle className="text-xl mb-4">Complete Logo Package</CardTitle>
@@ -253,7 +260,7 @@ export default function LogoMaker() {
                   <span>Commercial usage rights</span>
                 </li>
               </ul>
-              <Button size="lg" className="w-full text-lg">
+              <Button size="lg" className="w-full text-lg bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-semibold rounded-full shadow-lg hover:shadow-xl transition-all duration-300">
                 Get Started Now
               </Button>
             </CardContent>
@@ -262,26 +269,27 @@ export default function LogoMaker() {
       </section>
 
       {/* Big Text Bubble with Orange Button */}
-      <section className="py-20 px-6 bg-gray-100 dark:bg-gray-900">
-        <div className="max-w-4xl mx-auto text-center">
-          <div className="bg-white dark:bg-neutral-900 rounded-3xl p-12 shadow-2xl border border-gray-200 dark:border-gray-700">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900 dark:text-white">
-              Design Your Brand Like You Mean It
-            </h2>
-            <p className="text-xl text-gray-600 dark:text-gray-300 mb-8 max-w-2xl mx-auto">
-              Create professional logos with custom fonts, colors, and icons. 
-              Get a complete brand kit that makes your business look amazing.
-            </p>
+      <section className="py-16 px-6 bg-white dark:bg-black">
+        <div className="max-w-5xl mx-auto text-center">
+          <h2 className="text-5xl md:text-7xl font-bold mb-8 text-gray-900 dark:text-white leading-tight tracking-tight">
+            Design Your Brand Like You Really Want
+          </h2>
+          <p className="text-xl md:text-2xl text-gray-600 dark:text-gray-400 mb-12 max-w-3xl mx-auto font-light">
+            Create professional logos with custom fonts, colors, and icons. 
+            Get a complete brand kit that makes your business look amazing.
+          </p>
+          <div className="max-w-2xl mx-auto bg-gray-50 dark:bg-neutral-900 rounded-full p-1.5 mb-8 flex items-center">
+            <input
+              type="text"
+              placeholder="Type Something Cool"
+              className="flex-1 px-6 py-4 bg-transparent text-lg outline-none text-gray-900 dark:text-white placeholder:text-gray-400"
+            />
             <Button 
               size="lg" 
-              className="text-lg px-12 py-4 bg-orange-500 hover:bg-orange-600 text-white font-semibold rounded-xl shadow-[0_8px_25px_rgba(249,115,22,0.4)] hover:shadow-[0_12px_35px_rgba(249,115,22,0.5)] transform hover:scale-105 transition-all duration-300"
+              className="text-base px-8 py-5 bg-orange-500 hover:bg-orange-600 text-white font-semibold rounded-full shadow-lg hover:shadow-xl transition-all duration-300"
             >
-              <Sparkles className="mr-2 h-5 w-5" />
-              Start Creating Your Logo
+              Show Me Logo Ideas →
             </Button>
-            <p className="text-sm text-gray-500 dark:text-gray-400 mt-4">
-              Free to try • No credit card required • 17,000+ creators trust us
-            </p>
           </div>
         </div>
       </section>

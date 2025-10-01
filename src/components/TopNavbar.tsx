@@ -57,19 +57,19 @@ export default function TopNavbar() {
         </div>
         
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center gap-5 md:gap-6 text-sm ml-3 sm:ml-6 md:ml-10">
-          <Link href="/" className="opacity-80 hover:opacity-100">Home</Link>
-          <Link href="/services" className="opacity-80 hover:opacity-100">Services</Link>
-          <Link href="/logo-maker" className="opacity-80 hover:opacity-100">Logo Maker</Link>
-          <Link href="/portfolio" className="opacity-80 hover:opacity-100">Portfolio</Link>
-          <Link href="/blog" className="opacity-80 hover:opacity-100">Blog</Link>
-          <Link href="/contact" className="opacity-80 hover:opacity-100">Contact</Link>
-          <Link href="/get-started" className="opacity-80 hover:opacity-100">Get Started</Link>
+        <nav className="hidden md:flex items-center gap-5 md:gap-6 text-base ml-3 sm:ml-6 md:ml-10">
+          <Link href="/" className="font-bold opacity-80 hover:opacity-100">Home</Link>
+          <Link href="/services" className="font-bold opacity-80 hover:opacity-100">Services</Link>
+          <Link href="/logo-maker" className="font-bold opacity-80 hover:opacity-100">Logo Maker</Link>
+          <Link href="/portfolio" className="font-bold opacity-80 hover:opacity-100">Portfolio</Link>
+          <Link href="/blog" className="font-bold opacity-80 hover:opacity-100">Blog</Link>
+          <Link href="/contact" className="font-bold opacity-80 hover:opacity-100">Contact</Link>
+          <Link href="/get-started" className="font-bold opacity-80 hover:opacity-100">Get Started</Link>
           <button
             ref={themeRef}
             onClick={toggleSwitchTheme}
             aria-label="Toggle theme"
-            className="ml-2 inline-flex h-8 w-8 items-center justify-center rounded-md border border-border opacity-80 hover:opacity-100"
+            className="ml-2 inline-flex h-8 w-8 items-center justify-center rounded-full border border-border opacity-80 hover:opacity-100"
           >
             {mounted && (isDark ? "🌙" : "☀️")}
           </button>
@@ -81,13 +81,13 @@ export default function TopNavbar() {
             ref={themeRef}
             onClick={toggleSwitchTheme}
             aria-label="Toggle theme"
-            className="inline-flex h-8 w-8 items-center justify-center rounded-md border border-border opacity-80 hover:opacity-100"
+            className="inline-flex h-8 w-8 items-center justify-center rounded-full border border-border opacity-80 hover:opacity-100"
           >
             {mounted && (isDark ? "🌙" : "☀️")}
           </button>
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="inline-flex h-8 w-8 items-center justify-center rounded-md border border-border opacity-80 hover:opacity-100"
+            className="inline-flex h-8 w-8 items-center justify-center rounded-full border border-border opacity-80 hover:opacity-100"
             aria-label="Toggle mobile menu"
           >
             {mobileMenuOpen ? <X className="h-4 w-4" /> : <Menu className="h-4 w-4" />}
@@ -104,13 +104,13 @@ export default function TopNavbar() {
           className="md:hidden bg-white/95 dark:bg-neutral-900/95 backdrop-blur supports-[backdrop-filter]:bg-white/95 dark:supports-[backdrop-filter]:bg-neutral-900/95 border-t border-border"
         >
           <nav className="flex flex-col py-4 px-6 space-y-3">
-            <Link href="/" className="text-gray-900 dark:text-white opacity-80 hover:opacity-100 py-2" onClick={() => setMobileMenuOpen(false)}>Home</Link>
-            <Link href="/services" className="text-gray-900 dark:text-white opacity-80 hover:opacity-100 py-2" onClick={() => setMobileMenuOpen(false)}>Services</Link>
-            <Link href="/logo-maker" className="text-gray-900 dark:text-white opacity-80 hover:opacity-100 py-2" onClick={() => setMobileMenuOpen(false)}>Logo Maker</Link>
-            <Link href="/portfolio" className="text-gray-900 dark:text-white opacity-80 hover:opacity-100 py-2" onClick={() => setMobileMenuOpen(false)}>Portfolio</Link>
-            <Link href="/blog" className="text-gray-900 dark:text-white opacity-80 hover:opacity-100 py-2" onClick={() => setMobileMenuOpen(false)}>Blog</Link>
-            <Link href="/contact" className="text-gray-900 dark:text-white opacity-80 hover:opacity-100 py-2" onClick={() => setMobileMenuOpen(false)}>Contact</Link>
-            <Link href="/get-started" className="text-gray-900 dark:text-white opacity-80 hover:opacity-100 py-2" onClick={() => setMobileMenuOpen(false)}>Get Started</Link>
+            <Link href="/" className="text-gray-900 dark:text-white font-bold opacity-80 hover:opacity-100 py-2" onClick={() => setMobileMenuOpen(false)}>Home</Link>
+            <Link href="/services" className="text-gray-900 dark:text-white font-bold opacity-80 hover:opacity-100 py-2" onClick={() => setMobileMenuOpen(false)}>Services</Link>
+            <Link href="/logo-maker" className="text-gray-900 dark:text-white font-bold opacity-80 hover:opacity-100 py-2" onClick={() => setMobileMenuOpen(false)}>Logo Maker</Link>
+            <Link href="/portfolio" className="text-gray-900 dark:text-white font-bold opacity-80 hover:opacity-100 py-2" onClick={() => setMobileMenuOpen(false)}>Portfolio</Link>
+            <Link href="/blog" className="text-gray-900 dark:text-white font-bold opacity-80 hover:opacity-100 py-2" onClick={() => setMobileMenuOpen(false)}>Blog</Link>
+            <Link href="/contact" className="text-gray-900 dark:text-white font-bold opacity-80 hover:opacity-100 py-2" onClick={() => setMobileMenuOpen(false)}>Contact</Link>
+            <Link href="/get-started" className="text-gray-900 dark:text-white font-bold opacity-80 hover:opacity-100 py-2" onClick={() => setMobileMenuOpen(false)}>Get Started</Link>
           </nav>
         </motion.div>
       )}

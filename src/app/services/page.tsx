@@ -69,24 +69,24 @@ const services = [
 
 export default function Services() {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-white dark:bg-black">
       {/* Hero Section */}
-      <section className="py-20 px-6 bg-gray-100 dark:bg-gray-900">
-        <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6">
-            Our <span className="text-primary">Services</span>
+      <section className="pt-8 md:pt-12 pb-12 px-6 bg-white dark:bg-black">
+        <div className="max-w-6xl mx-auto text-center">
+          <h1 className="text-5xl md:text-7xl font-bold mb-6">
+            Our <span className="text-orange-500">Services</span>
           </h1>
-          <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
+          <p className="text-lg md:text-xl text-gray-600 dark:text-gray-400 mb-8 max-w-3xl mx-auto font-light">
             We provide comprehensive design and development services to bring your digital vision to life.
           </p>
-          <Button size="lg" className="text-lg px-8">
+          <Button size="lg" className="text-lg px-8 bg-orange-500 hover:bg-orange-600">
             Get Started Today
           </Button>
         </div>
       </section>
 
       {/* Services Grid */}
-      <section className="py-20 px-6 bg-gray-100 dark:bg-gray-900">
+      <section className="py-16 px-6 bg-gray-50 dark:bg-neutral-950">
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
@@ -117,7 +117,7 @@ export default function Services() {
       </section>
 
       {/* Logo Maker Section */}
-      <section className="py-20 px-6 bg-gray-100 dark:bg-gray-900">
+      <section className="py-16 px-6 bg-white dark:bg-black">
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>

@@ -79,14 +79,14 @@ export default function Blog() {
   const regularPosts = blogPosts.filter(post => !post.featured);
 
   return (
-    <div className="min-h-screen bg-gray-100 dark:bg-gray-900">
+    <div className="min-h-screen bg-white dark:bg-black">
       {/* Hero Section */}
-      <section className="py-20 px-6">
-        <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6">
-            Our <span className="text-primary">Blog</span>
+      <section className="pt-8 md:pt-12 pb-12 px-6">
+        <div className="max-w-6xl mx-auto text-center">
+          <h1 className="text-5xl md:text-7xl font-bold mb-6">
+            Our <span className="text-orange-500">Blog</span>
           </h1>
-          <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
+          <p className="text-lg md:text-xl text-gray-600 dark:text-gray-400 mb-8 max-w-3xl mx-auto font-light">
             Insights, tutorials, and thoughts on web development, design, and digital innovation.
           </p>
         </div>
@@ -200,7 +200,7 @@ export default function Blog() {
       </section>
 
       {/* Newsletter CTA */}
-      <section className="py-20 px-6 bg-gray-100 dark:bg-gray-900">
+      <section className="py-16 px-6 bg-gray-50 dark:bg-neutral-950">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
             Stay Updated
