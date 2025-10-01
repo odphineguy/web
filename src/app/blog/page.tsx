@@ -100,7 +100,11 @@ export default function Blog() {
               <Badge 
                 key={category} 
                 variant={category === "All" ? "default" : "outline"}
-                className="cursor-pointer hover:bg-primary hover:text-primary-foreground transition-colors"
+                className={`cursor-pointer transition-colors ${
+                  category === "All" 
+                    ? "bg-orange-500 hover:bg-orange-600 text-white border-orange-500" 
+                    : "hover:bg-orange-500 hover:text-white hover:border-orange-500"
+                }`}
               >
                 {category}
               </Badge>
