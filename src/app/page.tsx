@@ -118,6 +118,13 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-white dark:bg-black">
       <HeroParallax products={products} />
+      
+      {/* Placeholder Section */}
+      <section className="py-24 px-6 bg-gray-50 dark:bg-neutral-950">
+        <div className="max-w-6xl mx-auto">
+          {/* Empty placeholder section */}
+        </div>
+      </section>
     </div>
   );
 }
