@@ -81,7 +81,7 @@ export default function Blog() {
   return (
     <div className="min-h-screen bg-white dark:bg-black">
       {/* Hero Section */}
-      <section className="pt-8 md:pt-12 pb-12 px-6">
+      <section className="pt-8 md:pt-12 pb-4 px-6">
         <div className="max-w-6xl mx-auto text-center">
           <h1 className="text-5xl md:text-7xl font-bold mb-6">
             Our <span className="text-orange-500">Blog</span>
@@ -93,7 +93,7 @@ export default function Blog() {
       </section>
 
       {/* Category Filter */}
-      <section className="py-8 px-6">
+      <section className="py-4 px-6">
         <div className="max-w-4xl mx-auto">
           <div className="flex flex-wrap gap-2 justify-center">
             {categories.map((category) => (
