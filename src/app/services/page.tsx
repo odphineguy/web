@@ -79,7 +79,7 @@ export default function Services() {
           <p className="text-lg md:text-xl text-gray-600 dark:text-gray-400 mb-8 max-w-3xl mx-auto font-light">
             We provide comprehensive design and development services to bring your digital vision to life.
           </p>
-          <Button size="lg" className="text-lg px-8 bg-orange-500 hover:bg-orange-600">
+          <Button size="lg" className="text-lg px-8 bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-semibold rounded-full shadow-lg hover:shadow-xl transition-all duration-300">
             Get Started Today
           </Button>
         </div>
@@ -146,7 +146,7 @@ export default function Services() {
                 </div>
               </div>
               <Link href="/logo-maker">
-                <Button size="lg" className="text-lg px-8 flex items-center">
+                <Button size="lg" className="text-lg px-8 flex items-center bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-semibold rounded-full shadow-lg hover:shadow-xl transition-all duration-300">
                   Try Logo Maker Now
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>

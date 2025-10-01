@@ -111,7 +111,7 @@ export default function GetStarted() {
                       <Input id="password" type="password" placeholder="Enter your password" className="pl-10" />
                     </div>
                   </div>
-                  <Button className="w-full">
+                  <Button className="w-full bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-semibold rounded-full shadow-lg hover:shadow-xl transition-all duration-300">
                     Sign In
                   </Button>
                   <div className="text-center">
@@ -160,7 +160,7 @@ export default function GetStarted() {
                       <Input id="password" type="password" placeholder="Create a password" className="pl-10" />
                     </div>
                   </div>
-                  <Button className="w-full">
+                  <Button className="w-full bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-semibold rounded-full shadow-lg hover:shadow-xl transition-all duration-300">
                     Create Account
                   </Button>
                 </CardContent>
@@ -207,8 +207,7 @@ export default function GetStarted() {
                     ))}
                   </ul>
                   <Button 
-                    className={`w-full ${plan.popular ? 'bg-gray-900 dark:bg-white text-white dark:text-gray-900 hover:bg-gray-800 dark:hover:bg-gray-100' : ''}`}
-                    variant={plan.popular ? 'default' : 'outline'}
+                    className="w-full bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-semibold rounded-full shadow-lg hover:shadow-xl transition-all duration-300"
                   >
                     {plan.name === 'Enterprise' ? 'Contact Us' : 'Get Started'}
                     <ArrowRight className="ml-2 h-4 w-4" />
@@ -255,10 +254,10 @@ export default function GetStarted() {
             Let&apos;s discuss your project and create something amazing together.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="text-lg px-8">
+            <Button size="lg" className="text-lg px-8 bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-semibold rounded-full shadow-lg hover:shadow-xl transition-all duration-300">
               Start Your Project
             </Button>
-            <Button size="lg" variant="outline" className="text-lg px-8">
+            <Button size="lg" variant="outline" className="text-lg px-8 rounded-full">
               Schedule Consultation
             </Button>
           </div>

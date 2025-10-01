@@ -143,7 +143,7 @@ export default function Blog() {
                       {featuredPost.readTime}
                     </div>
                   </div>
-                  <Button className="w-fit group">
+                  <Button className="w-fit group bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-semibold rounded-full shadow-lg hover:shadow-xl transition-all duration-300">
                     Read More
                     <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
                   </Button>
@@ -214,7 +214,7 @@ export default function Blog() {
               placeholder="Enter your email"
               className="flex-1 px-4 py-3 rounded-md border border-input bg-background text-sm"
             />
-            <Button className="px-8">
+            <Button className="px-8 bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-semibold rounded-full shadow-lg hover:shadow-xl transition-all duration-300">
               Subscribe
             </Button>
           </div>
