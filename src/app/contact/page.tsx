@@ -33,7 +33,7 @@ export default function ContactPage() {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              Try Our <span className="text-primary">Receipt Scanner</span>
+              Try Our <span className="text-orange-500">Receipt Scanner</span>
             </h2>
             <p className="text-xl text-muted-foreground">
               Upload a receipt and see our AI-powered scanner in action.

@@ -38,15 +38,15 @@ export default function ContactForm() {
     <form className="grid gap-4 max-w-xl" onSubmit={onSubmit}>
       <div className="grid gap-2">
         <label htmlFor="name" className="text-sm">Name</label>
-        <input id="name" name="name" type="text" required className="rounded-md border border-input bg-background px-3 py-2 outline-none focus:ring-2 focus:ring-amber-500" />
+        <input id="name" name="name" type="text" required className="rounded-full border border-input bg-background px-4 py-3 outline-none focus:ring-2 focus:ring-orange-500" />
       </div>
       <div className="grid gap-2">
         <label htmlFor="email" className="text-sm">Email</label>
-        <input id="email" name="email" type="email" required className="rounded-md border border-input bg-background px-3 py-2 outline-none focus:ring-2 focus:ring-amber-500" />
+        <input id="email" name="email" type="email" required className="rounded-full border border-input bg-background px-4 py-3 outline-none focus:ring-2 focus:ring-orange-500" />
       </div>
       <div className="grid gap-2">
         <label htmlFor="message" className="text-sm">Message</label>
-        <textarea id="message" name="message" rows={5} required className="rounded-md border border-input bg-background px-3 py-2 outline-none focus:ring-2 focus:ring-amber-500" />
+        <textarea id="message" name="message" rows={5} required className="rounded-3xl border border-input bg-background px-4 py-3 outline-none focus:ring-2 focus:ring-orange-500" />
       </div>
       <button
         type="submit"

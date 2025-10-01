@@ -80,7 +80,7 @@ export default function GetStarted() {
       </section>
 
       {/* Login/Register Tabs */}
-      <section className="py-12 px-6">
+      <section className="py-6 px-6">
         <div className="max-w-md mx-auto">
           <Tabs value={isLogin ? "login" : "register"} onValueChange={(value) => setIsLogin(value === "login")}>
             <TabsList className="grid w-full grid-cols-2 rounded-full p-1">
